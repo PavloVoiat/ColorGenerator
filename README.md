@@ -30,13 +30,13 @@ cd ColorGenerator
 
 ## 🌐 Технологии
 
-· HTML5
-· CSS3 (Flexbox/Grid, адаптивная верстка)
+· HTML5 <br>
+· CSS3 (Flexbox/Grid, адаптивная верстка) <br>
 · JavaScript (ES6+)
 
 👨‍💻 Автор
 
-pavlovoiat — GitHub профиль
+pavlovoiat — [GitHub профиль](https://github.com/pavlovoiat)
 
 ---
 
