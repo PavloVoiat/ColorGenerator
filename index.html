@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Генератор цветов</title>
-		<!---->
+		<title>Color Generator</title>
+
 		<style>
 			body {
 				background-color: black;
@@ -50,14 +50,20 @@
 				margin: 0.1%;
 				transition: background 1s ease;
 				width: 100%;
+				animation: fadeIn 0.4s ease;
 			}
 			
 			.color-card.locked {
 				border: 4px solid black;
 				transform: scale(0.95);
 			}
+
+			@keyframes fadeIn {
+				from { opacity: 0; transform: scale(0.9); }
+				to { opacity: 1; transform: scale(1); }
+			}
 		</style>
-		<!---->
+
 	</head>
 	<body>
 		<div id="wrapper"></div>
@@ -66,7 +72,7 @@
 			<button onclick="createColorBlocks()">Новый цвет</button>
 			<button onclick="resetPalette()">Сбросить</button>
 		</div>
-		<!---->
+
 		<script>
 			//Вариабельная сна
 			const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
@@ -144,7 +150,7 @@
 				if (event.code === 'Space') {
 					if (isProcessing) return;
 					isProcessing = true;
-					await createColorBlock();
+					await createColorBlocks();
 					isProcessing = false;
 				}
 			};
@@ -158,6 +164,6 @@
 				console.log("Вся палитра скопирована: " + allHex);
 			}
 		</script>
-		<!---->
+
 	</body>	
 </html>
