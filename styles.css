@@ -1,0 +1,56 @@
+body {
+  background-color: black;
+}
+			
+#wrapper {
+  display: flex;
+	flex-direction: column;
+	height: 93vh;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+			
+.controls {
+	display: flex;
+	width: 100%;
+	height: 9vh;
+	gap: 5px;
+	padding: 10px;
+	box-sizing: border-box;
+}
+			
+.controls button {
+  flex: 1;
+	height: 7vh;
+	border-width: 0;
+	border-radius: 2vh;
+	font-weight: bold;
+	color: #999999;
+	background-color: #222222;
+	cursor: pointer;
+}
+			
+.color-card {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: Monospace;
+  font-weight: bold;
+	flex: 1;
+	border-radius: 2vh;
+	margin: 0.1%;
+	transition: background 1s ease;
+	width: 100%;
+	animation: fadeIn 0.4s ease;
+}
+			
+.color-card.locked {
+	border: 4px solid black;
+	transform: scale(0.95);
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; transform: scale(0.9); }
+	to { opacity: 1; transform: scale(1); }
+}
